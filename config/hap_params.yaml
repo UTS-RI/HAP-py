@@ -1,0 +1,12 @@
+epsilon: 1.0                # max distance in configuration space between adjacent mapped poses
+max_grid_edge_dist: 0.16    # max euclidean distance (considers pose positions only) for an edge to be considered between poses
+collision_interp_res: 0.1   # resolution (radians) used to check if an edge between two mapped configs is collision free
+max_num_subspaces: 5        # maximum number of subspaces/ HA maps
+num_root_nodes: 5           # number of root nodes to sample from T_open for each subspace generation - set to -1 to use all unmapped nodes
+c_max: 5.0                  # initial path cost for all nodes - to favour subspaces with greater task space coverage
+zeta: 6.0                   # enforce distance between source node configuration and average configuration of first subspace to be within this threshold
+ee_offset:                  # (optional) 4x4 pose matrix with specified end effector offset (in local attached link frame)
+  - [1.0, 0.0, 0.0, 0.0]
+  - [0.0, 1.0, 0.0, 0.0]
+  - [0.0, 0.0, 1.0, 0.0]
+  - [0.0, 0.0, 0.0, 1.0]

@@ -1,0 +1,6 @@
+*.pyc
+*.pkl
+*.egg-info/
+build/
+dist/
+databases/
